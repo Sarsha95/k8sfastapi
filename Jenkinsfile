@@ -19,6 +19,7 @@ node {
                         sh "git config user.name Sarsha95"
                         //sh "git switch master"
                         sh "cat deployment.yaml"
+                        def DOCKERTAG = env.DOCKERTAG
                         sh "sed -i 's+sarsha1995/jenkinspipe.*+sarsha1995/jenkinspipe:${DOCKERTAG}+g' deployment.yaml"
                         sh "cat deployment.yaml"
                         sh "git add ."
