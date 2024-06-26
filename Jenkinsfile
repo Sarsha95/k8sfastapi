@@ -1,5 +1,8 @@
 node {
     def app
+    environment {
+        DOCKERTAG = 'latest'
+    }
 
     stage('Clone repository') {
       
